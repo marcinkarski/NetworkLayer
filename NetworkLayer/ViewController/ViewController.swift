@@ -1,20 +1,20 @@
-//
-//  ViewController.swift
-//  NetworkLayer
-//
-//  Created by Marcin Karski on 17/09/2018.
-//  Copyright © 2018 Marcin Karski. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    fileprivate var request: AnyObject?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchUser()
     }
-
-
+    
+    func fetchUser() {
+        let userResource = UserResource()
+        let questionsRequest = ApiRequest(resource: userResource)
+        request = questionsRequest
+        questionsRequest.load { [weak self] (user) in
+            print(user)
+        }
+    }
 }
-

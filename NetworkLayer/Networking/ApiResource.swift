@@ -17,9 +17,9 @@ extension ApiResource {
 
 struct UsersResource: ApiResource {
     let methodPath = "/users/"
-    func makeModel(data: Data) -> GitUsers.User? {
+    func makeModel(data: Data) -> GitUser? {
         let decoder = JSONDecoder()
-        guard let users = try? decoder.decode(GitUsers.User.self, from: data) else { return nil }
+        guard let users = try? decoder.decode(GitUser.self, from: data) else { return nil }
         return users
     }
 }

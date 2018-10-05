@@ -178,16 +178,8 @@
 				2E70E9DC2166028E005AA9B1 /* NetworkRequest.swift */,
 				2EC95A08215037B500270B41 /* EndPoint */,
 				2EC95A07215037AD00270B41 /* Manager */,
-				2EC95A06215037A400270B41 /* Service */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		2EC95A06215037A400270B41 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		2EC95A07215037AD00270B41 /* Manager */ = {
